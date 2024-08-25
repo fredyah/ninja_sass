@@ -2,6 +2,21 @@
     .text-#{$key} {
         color: $val;
     }
+    .text-hover-#{$key} {
+        // hover 游標移動過去後的效果
+        &:hover {
+            color: $val;
+        }
+
+        /*
+        &:last-child {
+
+        }
+        &:nth-child(2) {
+
+        }
+        */
+    }
     .bg-#{$key} {
         background-color: $val;
     }
