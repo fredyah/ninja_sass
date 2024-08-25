@@ -6,25 +6,38 @@
         background-color: $val;
     }
 
-    // light variations
-    @for $i from 1 through 9 {
-        .text-#{$key}-light-#{$i} {
-            color: mix(white, $val, $i * 10 * 1%);
-        }
-        .bg-#{$key}-light-#{$i} {
-            background-color: mix(white, $val, $i * 10 * 1%);
-        }
-    }
+    @if($val != black and $val != white) {
 
-    // dark variations
-    @for $i from 1 through 9 {
-        .text-#{$key}-dark-#{$i} {
-            color: mix(black, $val, $i * 10 * 1%);
+        // light variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-light-#{$i} {
+                color: mix(white, $val, $i * 10 * 1%);
+            }
+            .bg-#{$key}-light-#{$i} {
+                background-color: mix(white, $val, $i * 10 * 1%);
+            }
         }
-        .bg-#{$key}-dark-#{$i} {
-            background-color: mix(black, $val, $i * 10 * 1%);
-        }
-    }
 
+        // dark variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-dark-#{$i} {
+                color: mix(black, $val, $i * 10 * 1%);
+            }
+            .bg-#{$key}-dark-#{$i} {
+                background-color: mix(black, $val, $i * 10 * 1%);
+            }
+        }
+        /* if ... else ...
+        @if(10 < 5) {
+            .test-if {
+                color: black;
+            }
+        }@else {
+            .test-if-2 {
+                color: white;
+            }
+        }
+        */
+    }
 }
 
