@@ -9,20 +9,20 @@
     // light variations
     @for $i from 1 through 9 {
         .text-#{$key}-light-#{$i} {
-            color: max(white, $val, $i * 10);
+            color: mix(white, $val, $i * 10 * 1%);
         }
         .bg-#{$key}-light-#{$i} {
-            background-color: max(white, $val, $i * 10);
+            background-color: mix(white, $val, $i * 10 * 1%);
         }
     }
 
     // dark variations
     @for $i from 1 through 9 {
         .text-#{$key}-dark-#{$i} {
-            color: max(black, $val, $i * 10);
+            color: mix(black, $val, $i * 10 * 1%);
         }
         .bg-#{$key}-dark-#{$i} {
-            background-color: max(black, $val, $i * 10);
+            background-color: mix(black, $val, $i * 10 * 1%);
         }
     }
 
